@@ -17,7 +17,8 @@ public class EmployeeDAO {
 	
 	private Connection getCon() throws Exception{
 		Context initCTX = new InitialContext();
-		DataSource ds = (DataSource)initCTX.lookup("jdbc/c7d2307t1");
+		Context envCTX = (Context)initCTX.lookup("java:comp/env");
+		DataSource ds = (DataSource)envCTX.lookup("jdbc/c7d2307t1");
 		con = ds.getConnection();
 		System.out.println("DAO : DB 연결 성공");
 		System.out.println("DAO : " + con);
@@ -38,7 +39,7 @@ public class EmployeeDAO {
 		int result = -1;
 		try {
 			con = getCon();
-			sql = "select emp_pw from Employee where emp_id = ?";
+			sql = "select emp_pw from Employees where emp_id = ?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, dto.getEmp_id());
 			rs = pstmt.executeQuery();

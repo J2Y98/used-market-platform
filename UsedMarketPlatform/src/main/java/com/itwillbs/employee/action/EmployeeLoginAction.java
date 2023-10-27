@@ -18,6 +18,7 @@ public class EmployeeLoginAction implements Action{
 		
 		dto.setEmp_id(request.getParameter("emp_id"));
 		dto.setEmp_pw(request.getParameter("emp_pw"));
+		
 		System.out.println(dto.getEmp_id() + ", " + dto.getEmp_pw());
 		int result = dao.loginEmployee(dto);
 		ActionForward forward = null;

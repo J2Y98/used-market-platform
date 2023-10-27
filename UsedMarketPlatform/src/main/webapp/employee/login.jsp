@@ -14,7 +14,7 @@
           <h1 class="h6 mb-3">로그인</h1>
           <div class="form-group">
             <label for="emp_id" class="sr-only">사번</label>
-            <input type="text" id="emp_id" name="emp_pw" class="form-control form-control-lg" placeholder="사번" required autofocus="사번을 입력해주세요!">
+            <input type="text" id="emp_id" name="emp_id" class="form-control form-control-lg" placeholder="사번" required autofocus="사번을 입력해주세요!">
           </div>
           <div class="form-group">
             <label for="emp_pw" class="sr-only">비밀번호</label>
