@@ -43,18 +43,37 @@ public class EmployeeFrontController extends HttpServlet{
 		ActionForward forward = null;
 		Action action = null;
 		if(command.equals("/login.emp")) {
+			// 로그인 페이지(처음 이동할 때 session 조회하고 이동 예정)
 			forward = new ActionForward();
 			forward.setPath("./employee/login.jsp");
 			forward.setRedirect(false);
 			System.out.println("C : " + forward);
 		}
-		else if(command.equals("/main.emp")) {
+		else if(command.equals("/loginAction.emp")) {
+			// 로그인 액션(DB 사용 및 메인 페이지 이동 진행)
 			action = new EmployeeLoginAction();
 			try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+		}
+		else if(command.equals("/main.emp")) {
+			// 메인 페이지(직원용)
+			forward = new ActionForward();
+			forward.setPath("./employee/main.jsp");
+			forward.setRedirect(false);
+			System.out.println("C : " + forward);
+		}
+		else if(command.equals("/changePwForm.emp")) {
+			// 비밀번호 변경 폼
+			forward = new ActionForward();
+			forward.setPath("./employee/changePwForm.jsp");
+			forward.setRedirect(false);
+			System.out.println("C : " + forward);
+		}
+		else if(command.equals("/changePwAction.emp")) {
+			
 		}
 		// ------------------가상주소 매핑----------------
 		// ------------------가상주소 이동----------------

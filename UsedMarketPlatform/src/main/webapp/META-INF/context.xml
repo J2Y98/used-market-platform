@@ -2,13 +2,13 @@
 <!DOCTYPE xml>
 <Context>
 	<Resource 
-		name="jdbc/mvc"
+		name="c7d2307t1"
 		auth="Container"
 		type="javax.sql.DataSource"
 		driverClassName="com.mysql.cj.jdbc.Driver"
-		username="root"
+		username="c7d2307t1"
 		password="1234"
-		url="jdbc:mysql://localhost:3306/jspdb"
+		url="https://itwillbs.com:3306/c7d2307t1"
 		maxWait="5000"
 	/>
 </Context>

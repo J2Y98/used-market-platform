@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Insert title here</title>
+<title>start.jsp</title>
 </head>
 <body>
-	<%response.sendRedirect("./login.emp"); %>
+	<%response.sendRedirect("./main.emp"); %>
 </body>
 </html>
